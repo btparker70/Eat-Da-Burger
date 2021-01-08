@@ -1,6 +1,6 @@
 // Dependencies
 var express = require("express");
-var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 require('dotenv').config();
 
@@ -23,6 +23,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give server access to them
 var routes = require("./controllers/burgers_controller.js")
+
 app.use(routes);
 
 app.listen(PORT, function() {
