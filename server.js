@@ -1,7 +1,6 @@
 // Dependencies
 var express = require("express");
 // var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
 require('dotenv').config();
 
 // Port
@@ -16,6 +15,8 @@ app.use(express.static("public"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+
+var exphbs = require("express-handlebars");
 
 // Set handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));

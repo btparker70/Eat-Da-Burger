@@ -6,9 +6,9 @@
                 <h2>Eat Your Burger</h2>
                 <ul>
                     {{#each burgers}}
-                        <li data-id="{{id}}">
-                            {{burger_name}}
-                        </li>
+                    <li>
+                        {{burger_name}}<button class="devour" data-id="{{id}}">DEVOUR!</button>
+                    </li>
                     {{/each}}
                 </ul>
             </div>
