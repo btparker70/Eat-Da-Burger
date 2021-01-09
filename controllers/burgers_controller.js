@@ -6,7 +6,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-    burger.all(function(data) {
+    burger.selectAll(function(data) {
         var hbsObject = {
             burgers: data
         };
@@ -16,10 +16,10 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-    burger.create(["burgers", "burger_name"],
-    [
-        req.body.name
-    ], function(result) {
+    console.log("router post")
+    burger.insertOne(["burger_name"], [req.body.burger_name], 
+    function(result) {
+        console.log(req.body.name);
         res.json({ id: result.insetId})
     })
 })

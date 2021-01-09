@@ -1,12 +1,14 @@
+$(function() {
 $(".create-form").on("submit", function(event) {
     event.preventDefault();
+    console.log("button hit");
 
     var newBurger = {
         burger_name: $("#createBurger").val().trim()
     };
 
     // Send the POST request
-    $.ajax("/api/cats", {
+    $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
     }).then(
@@ -16,4 +18,14 @@ $(".create-form").on("submit", function(event) {
             location.reload();
         }
     )
+
+    // $(".devour").on("click", function(event) {
+    //     event.preventDefault();
+
+    //     var id = $(this).data("id");
+    //     var devouredState = {
+    //         devoured
+    //     }
+    // })
+})
 })

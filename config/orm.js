@@ -15,32 +15,25 @@ var connection = require("../config/connection.js");
 
 // Object for all the SQL statement functions
 var orm = {
-    all: function(table, cb) {
-        var queryString = "SELECT * FROM " + table + ";";
-        connection.query(queryString, function(err, result) {
+    selectAll: function(table, cb) {
+        var queryString = "SELECT * FROM ??;";
+        connection.query(queryString, table, function(err, result) {
             if (err) throw err;
             cb(result);
         })
     },
-    create: function(table, cols, vals, cb) {
-        var queryString = "INSET INTO " + table;
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += vals.toString();
-        queryString += ") ";
+    insertOne: function(table, cols, vals, cb) {
+        var queryString = "INSERT INTO ?? (??) VALUES (?);"
 
         console.log(queryString);
-        connection.query(queryString, vals, function(err, result) {
+        connection.query(queryString, [table, cols, vals], function(err, result) {
             if (err) throw err;
 
             cb(result);
         })
     }
-    
-    // insertOne: function(table, column, value, cb) {
-    //     var queryString = "INSERT INTO " + table + 
+    // updateOne():
+
     
 }
 
