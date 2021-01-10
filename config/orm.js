@@ -31,8 +31,16 @@ var orm = {
 
             cb(result);
         })
+    },
+    updateOne: function(table, col, val, condition, cb) {
+        var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?;"
+
+        console.log(queryString);
+        connection.query(queryString, [table, col, val, condition], function(err, result) {
+            if (err) throw err;
+            cb(result);
+        })
     }
-    // updateOne():
 
     
 }

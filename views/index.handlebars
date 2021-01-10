@@ -8,7 +8,7 @@
                     {{#each burgers}}
                     <li>
                         {{#unless devoured}}
-                        {{burger_name}}<button class="devour" data-id="{{id}}">DEVOUR!</button>
+                        {{burger_name}}<button type="button" class="devour" id="devour" data-id="{{this.id}}" data-newDevoured="{{devour}}">DEVOUR!</button>
                         {{/unless}}
                     </li>
                     {{/each}}
