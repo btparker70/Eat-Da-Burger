@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    background-color: rgb(106, 226, 106);
+  }
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+    background-color: rgb(68, 151, 68);
+  }
+
+h1, h2 {
+    text-align: center;
+}
+form {
+    text-align: center;
+    display: inline-block;
+}
+
+.devour {
+    margin-left: 10px;
+}
+
+li {
+    margin: 10px 0;
+}
+.row {
+    /* text-align: center; */
+}
+.col-6, ul {
+    display:inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -4px;
+}
+
+/* footer {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin:0;
+} */
