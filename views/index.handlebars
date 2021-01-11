@@ -1,9 +1,13 @@
+{{!-- Header --}}
 <header class="jumbotron">
     <h1 class="display-3">Eat Da Burger!</h1>
     <p class="lead">A simple node app for creating, reading, updating and deleting to and from a SQL database.</p>
 </header>
+
+{{!-- Main --}}
 <div class="container">
     <div class="row">
+        {{!-- Left Side --}}
         <div class="col-6">
             <h2>Eat Your Burger</h2>
             <ul>
@@ -17,6 +21,7 @@
                 {{/each}}
             </ul>
         </div>
+        {{!-- Right side --}}
         <div class="col-6">
             <h2>Devoured Burgers</h2>
             <ul>
@@ -30,12 +35,13 @@
             </ul>
         </div>
     </div>
-
 </div>
+
+{{!-- Footer --}}
 <footer class="jumbotron">
     <div class="row">
         <h1>Order Your Burger</h1>
-
+        {{!-- Form --}}
         <form class="create-form">
             <div class="form-group">
                 <label for="createBurger">Burger name:</label>
@@ -43,4 +49,4 @@
             </div>
         </form>
     </div>
-    </footer>
+</footer>

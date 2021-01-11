@@ -1,4 +1,5 @@
 $(function () {
+    // Add burger form
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
         console.log("button hit");
@@ -19,6 +20,8 @@ $(function () {
             }
         )
     })
+
+    // Devour button
     $(".devour").on("click", function (event) {
         console.log("test")
         event.preventDefault();
